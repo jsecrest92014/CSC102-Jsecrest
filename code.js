@@ -80,4 +80,44 @@ function palindrome()
             }
     }
 }
-   
+function userInfoValidation()
+{
+    console.log("Verify User Info");
+
+    let firstNameField = document.getElementById("firstNameField");
+
+    let lastNameField = document.getElementById("lastNameField");
+
+    let zipField = document.getElementById("zipField")
+    
+    let results = document.getElementById("infoResults"); 
+    
+     results.innerHTML = "";
+
+    let firstNameValue = firstNameField.value;
+
+    let lastNameValue = lastNameField.value;
+
+    let zipvalue = zipField.value;
+
+    // concatenation
+    let firstLastName= firstNameValue + " " + lastNameValue;
+
+    console.log(firstLastName);
+
+    if (firstLastName.length > 20)
+    {
+        results.innerHTML = "No more than 20 characters!"; return;
+        
+    }
+    let zipRegex = /^\d{5}$/
+
+    if (!zipRegex.test(zipvalue))
+    {
+        results.innerHTML = "Must be 5 numberical digits"; return;
+    }
+   results.innerHTML = "Congrats Young Padawan"
+
+    console.log("Verified");
+
+}
