@@ -6,6 +6,7 @@
     <!-- the head section has info for browser and search engine -->
     <head>
         <title> CSC102 Home page </title>
+        <meta http-equiv="refresh" content="100">
         <link rel="stylesheet" href="main.css">
     </head>
     <!-- The body section holds the text and images that we want to show to the user -->
@@ -14,7 +15,14 @@
         <!-- p is paragraph tag; has spacing around it by default -->
         <p>
             <!-- img is the image tag --> 
-           <img id= "gifImage" src="csc102.gif">
+           <img style="position: relative"; id="memeImage" src="csc102.gif">
         </p>
+    
+     <button id="rightAnimation" onclick="rightAnimationFrame()">right</button>
+     <button id="leftAnimation" disabled onclick="leftAnimationFrame()">left</button>
+     <button id="stopAnimation" disabled onclick="stopAnimationFrame()">Stop</button>
+
+     <script src="code.js"></script>
      </body>
-    </html>
+
+  </html>

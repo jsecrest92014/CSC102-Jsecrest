@@ -114,10 +114,53 @@ function userInfoValidation()
 
     if (!zipRegex.test(zipvalue))
     {
-        results.innerHTML = "Must be 5 numberical digits"; return;
+        results.innerHTML = "Must be 5 numerical digits"; return;
     }
    results.innerHTML = "Congrats Young Padawan"
 
     console.log("Verified");
 
+}
+function rightAnimationFrame()
+{
+    incrementer = 1, 5;
+    let rightButton = document.getElementById("rightAnimation");
+    rightButton.disabled = true;
+    let leftbutton = document.getElementById("leftAnimation");
+    leftbutton.disabled = false;
+    let stopButton = document.getElementById("stopAnimation");
+    stopButton.disabled = false;
+    animationLoop();
+}
+function leftAnimationFrame()
+{
+    incrementer = -1, -5;
+    let rightButton = document.getElementById("rightAnimation");
+    rightButton.disabled = false;
+    let leftbutton = document.getElementById("leftAnimation");
+    leftbutton.disabled = true;
+    let stopButton = document.getElementById("stopAnimation");
+    stopButton.disabled = false;
+}
+function stopAnimationFrame()
+{
+    let startButton = document.getElementById("rightAnimation");
+    startButton.disabled = false;
+    let leftbutton = document.getElementById("leftAnimation");
+    leftbutton.disabled = false;
+    let stopButton = document.getElementById("stopAnimation");
+    stopButton.disabled = true;
+    incrementer = 0; 
+
+}
+const memeImage = document.getElementById("memeImage");
+let leftPos = 0;
+function animationLoop()
+{
+    console.log("repeat");
+    leftPos += incrementer;
+    memeImage.style.left = leftPos + "px"
+    
+
+    requestAnimationFrame(animationLoop);
 }
