@@ -123,7 +123,7 @@ function userInfoValidation()
 }
 function rightAnimationFrame()
 {
-    incrementer = 1, 5;
+    incrementer = 1;
     let rightButton = document.getElementById("rightAnimation");
     rightButton.disabled = true;
     let leftbutton = document.getElementById("leftAnimation");
@@ -134,7 +134,7 @@ function rightAnimationFrame()
 }
 function leftAnimationFrame()
 {
-    incrementer = -1, -5;
+    incrementer = -1;
     let rightButton = document.getElementById("rightAnimation");
     rightButton.disabled = false;
     let leftbutton = document.getElementById("leftAnimation");
@@ -150,7 +150,8 @@ function stopAnimationFrame()
     leftbutton.disabled = false;
     let stopButton = document.getElementById("stopAnimation");
     stopButton.disabled = true;
-    incrementer = 0; 
+    incrementer = 0;
+
 
 }
 const memeImage = document.getElementById("memeImage");
